@@ -1,0 +1,72 @@
+<mat-grid-list cols="17" rowHeight="100px">
+  <mat-grid-tile [colspan]="1" [rowspan]="5">
+  </mat-grid-tile>
+  <mat-grid-tile [colspan]="5">
+    D6
+  </mat-grid-tile>
+  <mat-grid-tile [colspan]="1" [rowspan]="4">
+  </mat-grid-tile>
+  <mat-grid-tile [colspan]="3">
+    D10
+  </mat-grid-tile>
+  <mat-grid-tile [colspan]="1" [rowspan]="4">
+  </mat-grid-tile>
+  <mat-grid-tile [colspan]="5">
+    D100
+  </mat-grid-tile>
+  <mat-grid-tile [colspan]="1" [rowspan]="5">
+  </mat-grid-tile>
+
+  <mat-grid-tile [colspan]="5" [rowspan]="3" [style.background]="dice">
+    <p style="font-size: 120px; color: red;">{{ d6Value }}</p>
+  </mat-grid-tile>
+  <mat-grid-tile [colspan]="3" [rowspan]="3" [style.background]="dice">
+    <p style="font-size: 120px; color: red;">{{ d10Value }}</p>
+  </mat-grid-tile>
+  <mat-grid-tile [colspan]="5" [rowspan]="3" [style.background]="dice">
+    <p style="font-size: 120px; color: red;">{{ d100Value }}</p>
+  </mat-grid-tile>
+
+  <mat-grid-tile [colspan]="2">
+    <div>
+      <button mat-raised-button color="primary" (click)="rollDice(1)">D6</button>
+    </div>
+  </mat-grid-tile>
+  <mat-grid-tile [colspan]="1"></mat-grid-tile>
+  <mat-grid-tile [colspan]="1">
+    <div>
+      <button mat-raised-button color="primary" (click)="rollDice(2)">D10</button>
+    </div>
+  </mat-grid-tile>
+  <mat-grid-tile [colspan]="1"></mat-grid-tile>
+  <mat-grid-tile [colspan]="1">
+    <div>
+      <button mat-raised-button color="primary" (click)="rollDice(3)">D100</button>
+    </div>
+  </mat-grid-tile>
+  <mat-grid-tile [colspan]="1"></mat-grid-tile>
+  <mat-grid-tile [colspan]="1">
+    <div>
+      <button mat-raised-button color="primary" (click)="rollDice(4)">D6 &amp; D10</button>
+    </div>
+  </mat-grid-tile>
+  <mat-grid-tile [colspan]="1"></mat-grid-tile>
+  <mat-grid-tile [colspan]="1">
+    <div>
+      <button mat-raised-button color="primary" (click)="rollDice(5)">D6 &amp; D100</button>
+    </div>
+  </mat-grid-tile>
+  <mat-grid-tile [colspan]="1"></mat-grid-tile>
+  <mat-grid-tile [colspan]="1">
+    <div>
+      <button mat-raised-button color="primary" (click)="rollDice(6)">D10 &amp; D100</button>
+    </div>
+  </mat-grid-tile>
+  <mat-grid-tile [colspan]="1"></mat-grid-tile>
+  <mat-grid-tile [colspan]="2">
+    <div>
+      <button mat-raised-button color="primary" (click)="rollDice(7)">D6 &amp; D10 &amp; D100</button>
+    </div>
+  </mat-grid-tile>
+</mat-grid-list>
+
